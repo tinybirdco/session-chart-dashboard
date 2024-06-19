@@ -22,24 +22,35 @@ export default function StaticDashboard() {
   return (
     <main className="mx-auto w-3/4">
       <h1 className="text-2xl font-bold my-8">{pageTitle}</h1>
-      <section> Requests by city </section>
-      <div>
+      <section className="border rounded-md p-4 mb-8" >
+        <div>
+        <h3 className="text-1xl font-bold my-8">{"Requests by city"}</h3>
+        </div>
         <div className="my-3">
           <CitySelect city={city} onChange={handleCityChange} />
         </div>
-      </div>  
       <div>
+        
       </div>
       <div className="grid grid-cols-2 gap-6"> 
+        
       </div>
-      <section> Total requests </section>
+      </section>
+      <section className="border rounded-md p-4 mb-8" >
+      <div>
+        <h3 className="text-1xl font-bold my-8">{"Total requests"}</h3>
+        </div>
        <div>
+        
       </div>
       <div className="grid grid-cols-3 gap-4">
+        
       </div>
+      </section>
     </main>
   );
 }
+
 ```
 
 ## Adding and updating Chart code
