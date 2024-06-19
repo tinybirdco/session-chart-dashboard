@@ -12,9 +12,10 @@ export function SensorTypesPie(params: {
       endpoint="https://api.us-east.tinybird.co/v0/pipes/sensor_types.json"
       token={TINYBIRD_TOKEN}
       index="sensor_type"
+      showLegend={true}
       categories={['requests']}
       colorPalette={['#86BFDB', '#FFC145', '#FF6B6C', '#DC82C8', '#FFC0F1']}
-      title="sensor_types_chart_8449"
+      title=""
       height="300px"
       params={params}
     />

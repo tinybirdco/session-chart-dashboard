@@ -16,7 +16,7 @@ export function SensorTypes(params: {
       index="sensor_type"
       categories={['requests']}
       colorPalette={['#86BFDB', '#FFC145', '#FF6B6C', '#DC82C8', '#FFC0F1']}
-      title="Sensor types"
+      title=""
       height="300px"
       params={params}
     />

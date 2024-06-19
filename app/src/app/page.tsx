@@ -23,19 +23,15 @@ export default function StaticDashboard() {
       <h1 className="text-2xl font-bold my-8">{pageTitle}</h1>
       <section> ================================= </section>
       <section> Requests by city </section>
-      <div>
         <div className="my-3">
           <CitySelect city={city} onChange={handleCityChange} />
         </div>
-      </div>  
       <div>
         <Requests city={city} />
-    
       </div>
       <div className="grid grid-cols-2 gap-6"> 
         <SensorTypes city={city} />
         <SensorTypesPie city={city} />
-
       </div>
       <section> ================================= </section>
       <section> Total requests </section>
