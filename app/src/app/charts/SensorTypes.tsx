@@ -1,7 +1,5 @@
 'use client'
 
-'use client'
-
 import { BarList } from '@tinybirdco/charts'
 
 const TINYBIRD_TOKEN = process.env.NEXT_PUBLIC_TINYBIRD_STATIC_READ_TOKEN;

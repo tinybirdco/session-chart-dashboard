@@ -9,7 +9,7 @@ import { TopEndpoints} from "./charts/TopEndpoints";
 import { Cities } from "./charts/Cities"
 import { Requests } from "./charts/Requests"
 
-const pageTitle = "Your weather dashboard";
+const pageTitle = "Building a weather dashboard";
 const token = process.env.NEXT_PUBLIC_TINYBIRD_STATIC_READ_TOKEN ?? ''; 
 
 export default function StaticDashboard() {
