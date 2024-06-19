@@ -13,7 +13,6 @@ export function TopEndpoints() {
       categories={['requests']}
       colorPalette={['#86BFDB', '#008060', '#0EB1B9', '#9263AF', '#5A72BF', '#FFBFDB', '#FFC145', '#FF6B6C', '#DC82C8', '#FFC0F1', '#5B6FC0']}
       borderColor="#NANNANNAN"
-      title="Endpoint requests"
       height="300px"
     />
   )

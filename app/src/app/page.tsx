@@ -21,8 +21,10 @@ export default function StaticDashboard() {
   return (
     <main className="mx-auto w-3/4">
       <h1 className="text-2xl font-bold my-8">{pageTitle}</h1>
-      <section> ================================= </section>
-      <section> Requests by city </section>
+      <section className="border rounded-md p-4 mb-8" >
+        <div>
+        <h3 className="text-1xl font-bold my-8">{"Requests by city"}</h3>
+        </div>
         <div className="my-3">
           <CitySelect city={city} onChange={handleCityChange} />
         </div>
@@ -33,8 +35,11 @@ export default function StaticDashboard() {
         <SensorTypes city={city} />
         <SensorTypesPie city={city} />
       </div>
-      <section> ================================= </section>
-      <section> Total requests </section>
+      </section>
+      <section className="border rounded-md p-4 mb-8" >
+      <div>
+        <h3 className="text-1xl font-bold my-8">{"Total requests"}</h3>
+        </div>
        <div>
         <Requests />
       </div>
@@ -43,6 +48,7 @@ export default function StaticDashboard() {
         <SensorTypes />
         <Cities />
       </div>
+      </section>
     </main>
   );
 }

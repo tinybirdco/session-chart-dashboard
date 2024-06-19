@@ -12,7 +12,6 @@ export function Cities() {
       index="city"
       categories={['requests']}
       colorPalette={['#86BFDB', '#FFC145', '#FF6B6C', '#DC82C8', '#FFC0F1']}
-      title="Cities"
       height="300px"
     />
   )
