@@ -1,0 +1,82 @@
+{
+  "timestamp": {
+    "type": "mockingbird.datetimeBetween",
+    "params": [
+      {
+        "start": "2024-01-01T00:00:00.000Z",
+        "end": "2024-06-19T00:00:00.000Z"
+      }
+    ]
+  },
+  "transaction_id": {
+    "type": "string.uuid"
+  },
+  "endpoint": {
+    "type": "mockingbird.pickWeighted",
+    "params": [
+      {
+        "values": [
+          "get_reports",
+          "get_extremes",
+          "daily_stats",
+          "monthly_stats"
+        
+        ],
+        "weights": [
+          75,
+          10,
+          10,
+          5
+        ]
+      }
+    ]
+  },
+  "city": {
+    "type": "mockingbird.pickWeighted",
+    "params": [
+      {
+        "values": [
+          "Denver",
+          "Salt Lake City"
+          "Chicago",
+          "Minneapolis",
+          "Houston",
+          "New York",
+          "Miami"
+        ],
+        "weights": [
+          55,
+          15,
+          10,
+          10,
+          10,
+          5,
+          5
+        ]
+      }
+    ]
+  },
+  "sensor_type": {
+    "type": "mockingbird.pickWeighted",
+    "params": [
+      {
+        "values": [
+          "temperature",
+          "humidity",
+          "Wind speed",
+          "Pressure",
+          "Clouds",
+          "Wind direction"
+        ],
+        "weights": [
+          65,
+          12,
+          10,
+          6,
+          5,
+          2
+        ]
+      }
+    ]
+  }
+}

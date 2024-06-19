@@ -1,0 +1,16 @@
+TOKEN "CHART_READ_TOKEN" READ
+
+TOKEN "cities_endpoint_read_4346" READ
+
+NODE endpoint
+SQL >
+
+    %
+        SELECT city, count(city) as requests
+        FROM events
+        WHERE 1
+        GROUP BY city
+        ORDER BY requests DESC
+        LIMIT 6
+
+

@@ -1,0 +1,18 @@
+TOKEN "CHART_READ_TOKEN" READ
+
+TOKEN "sensor_types_endpoint_read_4604" READ
+
+NODE endpoint
+SQL >
+
+    %
+        SELECT sensor_type, count(sensor_type) as requests 
+        FROM events
+        WHERE 1
+        {% if defined(city) %}
+           AND city = {{String(city, 'Denver')}}
+        {% end %}   
+        GROUP BY sensor_type 
+        ORDER BY requests DESC
+
+

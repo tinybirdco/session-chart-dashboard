@@ -1,0 +1,22 @@
+TOKEN "CHART_READ_TOKEN" READ
+
+TOKEN "top_endpoints_endpoint_read_5135" READ
+
+NODE get_processed
+SQL >
+
+    SELECT
+        pipe_name AS resource,
+        IF(resource = 'query_api', 'query_api', 'pipe') AS resource_type,
+        SUM(read_bytes_sum) / POW(10, 9) AS gb_read,
+        ROUND(
+            (SUM(read_bytes_sum) / POW(10, 9)) / 
+            (SELECT SUM(read_bytes_sum) / POW(10, 9) FROM tinybird.pipe_stats WHERE date > date_sub(NOW(), INTERVAL 30 DAYS)) * 100, 
+            1
+        ) AS percentage_gb_read
+    FROM tinybird.pipe_stats
+    WHERE date > date_sub(NOW(), INTERVAL 30 DAYS)
+    GROUP BY resource, resource_type
+    ORDER BY percentage_gb_read DESC
+
+

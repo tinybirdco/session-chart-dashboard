@@ -1,0 +1,15 @@
+TOKEN "CHART_READ_TOKEN" READ
+
+NODE endpoint
+SQL >
+
+    %
+        SELECT endpoint, 
+            count() as requests 
+            FROM events
+        WHERE 1
+        GROUP BY endpoint
+        ORDER BY requests DESC
+        LIMIT 10
+
+

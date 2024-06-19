@@ -1,0 +1,11 @@
+
+SCHEMA >
+    `city` String `json:$.city`,
+    `endpoint` String `json:$.endpoint`,
+    `sensor_type` String `json:$.sensor_type`,
+    `timestamp` DateTime `json:$.timestamp`,
+    `transaction_id` String `json:$.transaction_id`
+
+ENGINE "MergeTree"
+ENGINE_PARTITION_KEY "toYear(timestamp)"
+ENGINE_SORTING_KEY "timestamp, endpoint, sensor_type, transaction_id"
