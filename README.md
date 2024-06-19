@@ -1,4 +1,5 @@
-# Add Tinybird Charts to a Next.js frontend
+# Example code for a session on building dashboards.
+### Adding Tinybird Charts to a Next.js frontend
 
 This repo contains a minimal example demonstrating:
 
