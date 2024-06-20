@@ -1,14 +1,18 @@
 TOKEN "CHART_READ_TOKEN" READ
 
+TOKEN "requests_endpoint_read_5794" READ
+
 NODE endpoint
 SQL >
 
     %
-        SELECT toStartOfDay(timestamp) as time, city, count() as requests
-        FROM events
-        WHERE
-            city == {{ String(city, 'Chicago', description="", required=True) }}
-        GROUP BY time, city
-        ORDER BY requests desc
+    SELECT toStartOfDay(timestamp) as time, city, count() as requests
+    FROM events
+    WHERE 1
+    {% if defined(city) %}
+      AND city = {{String(city, 'Denver')}}
+    {% end %}   
+    GROUP BY time, city
+    ORDER BY requests desc
 
 

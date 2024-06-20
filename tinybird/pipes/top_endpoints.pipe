@@ -8,6 +8,9 @@ SQL >
             count() as requests 
             FROM events
         WHERE 1
+         {% if defined(city) %}
+             AND city = {{String(city, 'Denver')}}
+        {% end %} 
         GROUP BY endpoint
         ORDER BY requests DESC
         LIMIT 10
