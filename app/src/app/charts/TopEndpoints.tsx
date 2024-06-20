@@ -4,7 +4,9 @@ import { BarList } from '@tinybirdco/charts'
 
 const TINYBIRD_TOKEN = process.env.NEXT_PUBLIC_TINYBIRD_STATIC_READ_TOKEN;
 
-export function TopEndpoints() {
+export function TopEndpoints(params: {
+  city?: string
+}) {
   return (
     <BarList
       endpoint="https://api.us-east.tinybird.co/v0/pipes/top_endpoints.json"
@@ -14,6 +16,7 @@ export function TopEndpoints() {
       colorPalette={['#86BFDB', '#008060', '#0EB1B9', '#9263AF', '#5A72BF', '#FFBFDB', '#FFC145', '#FF6B6C', '#DC82C8', '#FFC0F1', '#5B6FC0']}
       borderColor="#NANNANNAN"
       height="300px"
+      params={params}
     />
   )
 }
