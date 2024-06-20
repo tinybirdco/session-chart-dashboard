@@ -11,6 +11,20 @@
   "transaction_id": {
     "type": "string.uuid"
   },
+  "account_id": {
+    "type": "mockingbird.pickWeighted",
+    "params": [
+      {
+        "values": [
+          "8888_jdi3_477888"
+          
+        ],
+        "weights": [
+          100
+        ]
+      }
+    ]
+  },
   "endpoint": {
     "type": "mockingbird.pickWeighted",
     "params": [
