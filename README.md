@@ -8,6 +8,7 @@ In this session we work with a stream of [Mockingbird](https://mockingbird.tinyb
 {
     "timestamp": "2024-06-20T02:26:31",
     "transaction_id": "c762f0f7-ac31-4761-a598-6db488d24cfc",
+    "account_id": "8888_jdi3_477888",
     "endpoint": "get_reports",
     "city": "Minneapolis",
     "sensor_type": "temperature"
