@@ -28,7 +28,7 @@ export function CitySelect({ city, onChange }: { city: string, onChange: (value:
           <SelectItem value="New York">New York</SelectItem>
           <SelectItem value="Chicago">Chicago</SelectItem>
           <SelectItem value="Houston">Houston</SelectItem>
-          <SelectItem value="Miami">Houston</SelectItem>
+          <SelectItem value="Miami">Miami</SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>
